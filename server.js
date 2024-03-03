@@ -1,16 +1,11 @@
 import http from "http";
+import app from "./src/app.js";
 
 const PORT = 3000;
 
-const opa = {
-    "/": "Curso de Express API",
-}
 
-const server = http.createServer((req, res) => {
-    res.writeHead(200, {"Content-Type": "text/plain"});
-    res.end(opa[req.url]);
-});
-
-server.listen(PORT, () => {
-    console.log(`Servidor escutando na porta ${PORT}!`)
+app.listen(PORT, () => {
+    console.log('o servidor esta ouvindo na porta 3000')
 })
+
+
